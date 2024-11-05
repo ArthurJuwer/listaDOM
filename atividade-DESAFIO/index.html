@@ -9,7 +9,27 @@ Crie uma página com um botão "Adicionar Item". Toda vez que o botão for clica
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manipulando DOM | DESAFIO</title>
 </head>
+<style>
+
+</style>
 <body>
+    <button>Adicionar Item</button>
+    <ul class="container-items"></ul>
     
 </body>
+<script>
+    const buttonAdicionar = document.querySelector("button")
+    const containerItem = document.querySelector(".container-items")
+
+    buttonAdicionar.addEventListener("click", ()=>{
+        let pergunta = prompt("Qual item você deseja adicionar? ")
+        
+        let item = document.createElement('li')
+
+        item.innerHTML = `${pergunta}`
+
+        containerItem.appendChild(item)
+
+    })
+</script>
 </html>
